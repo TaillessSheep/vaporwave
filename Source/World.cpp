@@ -380,6 +380,9 @@ void World::Update(float dt) {
 			mcPosition = mcPositionInitial;
 	}
 
+	if (mcPosition.y - mcRadius <= groundHight)
+		mcPosition.y = groundHight + mcRadius;
+
 
 	mCharater->Update(0.1);
 	
